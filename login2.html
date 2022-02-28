@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @font-face {
+        font-family: 'font';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    h1 {
+        font-family: 'font', sans-serif;
+        font-size: 25px;
+    }
+    html {
+        text-align: center;
+    }
+    input {
+        width: 80%;
+        height: 50px;
+        border: 2px solid black;
+        padding-left: 10px;
+    }
+    #id_ {
+        font-size: 20px;
+    }
+    #pass_ {
+        font-size: 20px;
+    }
+    #login {
+        width: 200px;
+        height: 75px;
+        background-color: green;
+        color: white;
+        font-size: 30px;
+        font-family: 'font', sans-serif;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+    #login:hover {
+        background-color: lightgreen;
+    }
+    </style>
+</head>
+<body>
+<h1 style="">BAJI LOGIN</h1>
+
+<form id="idform" method="post" action="index.html">
+    <h1>아이디</h1>
+    <input type="id" name="id" id="id_" placeholder="아이디를 입력해주세요...">
+    <h1>패스워드</h1>
+    <input type="password" name="pass" id="pass_" placeholder="비밀번호를 입력해주세요...">
+    <br>
+    <br>
+    <button id="login">로그인</button>
+</form>
+
+<script> 
+document.getElementById('login').onclick = function(e) { 
+    e.preventDefault();
+    var ID = document.getElementById('id_').value; 
+    var pass = document.getElementById('pass_').value; 
+    if (ID === "1234" && pass === "1234") { 
+        this.form.submit();
+    } else { 
+        alert("로그인 실패!"); 
+    } 
+} 
+</script>
+</body>
+</html>
